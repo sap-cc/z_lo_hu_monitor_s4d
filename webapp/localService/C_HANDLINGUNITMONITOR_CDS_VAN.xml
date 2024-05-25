@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../../sap/c_handlingunitmonitor_cds/$metadata">
+        <edmx:Include Namespace="C_HANDLINGUNITMONITOR_CDS" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="c_handlingunitmonitor_cds_van.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_HandlingUnitJITCallType/JITHeaderUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_HandlingUnitJITCallType/SalesOrganization">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_HandlingUnitJITCallType/DistributionChannel">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_HandlingUnitJITCallType/Division">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_HandlingUnitJITCallType/ExternalJITCallNumber">
+                <Annotation Term="Common.SemanticObject" String="JITSupplyToCustomer"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_HandlingUnitJITCallType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="JIT Call"/>
+                        <PropertyValue Property="TypeNamePlural" String="JIT Calls"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" String="">
+                                    <Annotation Term="Core.Messages">
+                                        <Collection>
+                                            <Record>
+                                                <PropertyValue Property="code" String="SADL_GW_EXP_VOCAN-001"/>
+                                                <PropertyValue Property="message" String="Property 'JIT Call' of annotation 'UI.HEADERINFO.TITLE' in proj./view 'C_HandlingUnitJITCall' not found"/>
+                                                <PropertyValue Property="severity" String="error"/>
+                                            </Record>
+                                        </Collection>
+                                    </Annotation>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" String="">
+                                    <Annotation Term="Core.Messages">
+                                        <Collection>
+                                            <Record>
+                                                <PropertyValue Property="code" String="SADL_GW_EXP_VOCAN-001"/>
+                                                <PropertyValue Property="message" String="Property 'JIT Call' of annotation 'UI.HEADERINFO.DESCRIPTION' in proj./view 'C_HandlingUnitJITCall' not found"/>
+                                                <PropertyValue Property="severity" String="error"/>
+                                            </Record>
+                                        </Collection>
+                                    </Annotation>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="InternalJITCallNumber"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ExternalJITCallNumber"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BusinessTransactionDocument"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="JITCallType"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="InternalJITCallNumber"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ExternalJITCallNumber"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BusinessTransactionDocument"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="JITCallType"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="InternalJITCallNumber"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>InternalJITCallNumber</PropertyPath>
+                        <PropertyPath>ExternalJITCallNumber</PropertyPath>
+                        <PropertyPath>BusinessTransactionDocument</PropertyPath>
+                        <PropertyPath>JITCallType</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/GrossWeight">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/NetWeight">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitMaxWeight">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitTareWeight">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitTareWeightUnit">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/GrossVolume">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitNetVolume">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitMaxVolume">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitTareVolume">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitTareVolumeUnit">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitLength">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitWidth">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitHeight">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/UnitOfMeasureDimension">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/ReservationObjectType">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/to_HandlingUnitItem">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/to_HandlingUnitJITCall">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/to_HandlingUnitReservation">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/to_I_DeliveryDocument">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/to_I_PackagingMaterialType">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/to_I_User">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/to_PackagingMaterialText">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/to_Plant">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/to_PlantVH">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/to_ShippingPointVH">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/to_StorageLocation">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/to_StorageLocationVH">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/to_WarehouseVH">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitIDChar32">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/WarehouseName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/PackagingMaterial"/>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/PackagingMaterialName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/PackagingMaterialTypeName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/PlantName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/StorageLocationName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/ParentHandlingUnitNumber">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitPackingObjectType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitReferenceDocName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/UserDescription">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitProcessStatusText">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/ReservationObjTypeName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitInternalOrig">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitExternalIDWareHs">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/SourceHandlingUnitUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/PackingInstruction">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/DeliveryDocument">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/CustomerName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/HandlingUnitReferenceDocument">
+                <Annotation Term="Common.SemanticObject" String="undefined"/>
+                <Annotation Term="Common.SemanticObjectMapping">
+                    <Collection>
+                        <Record>
+                            <PropertyValue Property="LocalProperty" PropertyPath="HandlingUnitReferenceDocument"/>
+                            <PropertyValue Property="SemanticObjectProperty" String="BusinessTransactionDocument"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType/ShipToParty">
+                <Annotation Term="Common.SemanticObject" String="Customer"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.HandlingUnitType">
+                <Annotation Term="UI.FilterFacets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="ID" String="SmartFilter"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SmartFilter"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.QuickViewFacets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="ID" String="QuickView"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#QuickView"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="CreatedByUser">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CreatedByUser"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="CreationDateTime">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CreationDateTime"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="GeneralInfoBlock1">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CreatedByUser"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CreationDateTime"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="GeneralInfoBlock2">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="LastChangedByUser"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="LastChangeDateTime"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="HandlingUnitReferenceDocument">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HandlingUnitReferenceDocument"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="HeaderColumn1">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Reference Document"/>
+                                    <PropertyValue Property="Value" Path="HandlingUnitReferenceDocument"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Ship-To Party"/>
+                                    <PropertyValue Property="Value" Path="ShipToParty"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Packing Instruction"/>
+                                    <PropertyValue Property="Value" Path="PackingInstructionNumber"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="HeaderColumn2">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Status"/>
+                                    <PropertyValue Property="Value" Path="HandlingUnitProcessStatus"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Reservation Document"/>
+                                    <PropertyValue Property="Value" Path="ReservationObjectNumber"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Warehouse"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="LastChangeDateTime">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="LastChangeDateTime"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="LastChangedByUser">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="LastChangedByUser"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="MeasurementsBlock1">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HandlingUnitTareWeight"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HandlingUnitMaxWeight"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="NetWeight"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="GrossWeight"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="MeasurementsBlock2">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HandlingUnitTareVolume"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HandlingUnitMaxVolume"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HandlingUnitNetVolume"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="GrossVolume"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="MeasurementsBlock3">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HandlingUnitLength"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HandlingUnitWidth"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HandlingUnitHeight"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="PackagingMaterial">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="PackagingMaterial"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Plant">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Plant"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="QuickView">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HandlingUnitProcessStatus"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Plant"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ReservationObjectNumber"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="HandlingUnitReferenceDocument"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CreationDateTime"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CreatedByUser"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="LastChangeDateTime"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="LastChangedByUser"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ShipToParty"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Quick View"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="ReservationObject">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ReservationObjectNumber"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Ship-To Party">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ShipToParty"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="StorageLocation">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="StorageLocation"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Warehouse">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Warehouse"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Handling Unit"/>
+                        <PropertyValue Property="TypeNamePlural" String="Handling Units"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Handling Unit"/>
+                                <PropertyValue Property="Value" Path="HandlingUnitExternalID"/>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="PackagingMaterial"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="HandlingUnitExternalID"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="HandlingUnitProductName"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Plant"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="StorageLocation"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Warehouse"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="HandlingUnitExternalID"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="HandlingUnitProductName"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Warehouse"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Load Carrier"/>
+                            <PropertyValue Property="Value" Path="PackagingMaterial"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="HandlingUnitExternalID"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="RequestAtLeast">
+                            <Collection>
+                                <PropertyPath>HandlingUnitReferenceDocName</PropertyPath>
+                                <PropertyPath>HandlingUnitPackingObjectType</PropertyPath>
+                                <PropertyPath>HandlingUnitExternalIDWareHs</PropertyPath>
+                                <PropertyPath>HandlingUnitInternalOrig</PropertyPath>
+                                <PropertyPath>PackagingMaterial</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>HandlingUnitExternalID</PropertyPath>
+                        <PropertyPath>HandlingUnitProductName</PropertyPath>
+                        <PropertyPath>HandlingUnitReferenceDocument</PropertyPath>
+                        <PropertyPath>Warehouse</PropertyPath>
+                        <PropertyPath>HandlingUnitProcessStatus</PropertyPath>
+                        <PropertyPath>PackingInstructionNumber</PropertyPath>
+                        <PropertyPath>PackagingMaterial</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_HandlingUnitReferenceDocVHType/HandlingUnitRefDocTypeName">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_HandlingUnitReservationType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Tentative Reservation"/>
+                        <PropertyValue Property="TypeNamePlural" String="Tentative Reservations"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" String="">
+                                    <Annotation Term="Core.Messages">
+                                        <Collection>
+                                            <Record>
+                                                <PropertyValue Property="code" String="SADL_GW_EXP_VOCAN-001"/>
+                                                <PropertyValue Property="message" String="Property 'Tentative Reservation' of annotation 'UI.HEADERINFO.TITLE' in proj./view 'C_HandlingUnitReservation' not found"/>
+                                                <PropertyValue Property="severity" String="error"/>
+                                            </Record>
+                                        </Collection>
+                                    </Annotation>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" String="">
+                                    <Annotation Term="Core.Messages">
+                                        <Collection>
+                                            <Record>
+                                                <PropertyValue Property="code" String="SADL_GW_EXP_VOCAN-001"/>
+                                                <PropertyValue Property="message" String="Property 'Tentative Reservation' of annotation 'UI.HEADERINFO.DESCRIPTION' in proj./view 'C_HandlingUnitReservation' not found"/>
+                                                <PropertyValue Property="severity" String="error"/>
+                                            </Record>
+                                        </Collection>
+                                    </Annotation>
+                                </PropertyValue>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="HandlingUnitLowerLevelRefer"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_HandlingUnitReservationDocVHType/ReservationObjectType">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_HandlingUnitReservationDocVHType/ReservationObjTypeName">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_HandlingUnitReservationDocVHType/Plant">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_HandlingUnitReservationDocVHType">
+                <Annotation Term="UI.FieldGroup" Qualifier="HeaderColumn2">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Label" String="Reservation Document"/>
+                                    <PropertyValue Property="Value" Path="ReservationObjectNumber"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="Plant">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Plant"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="QuickView">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Plant"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ReservationObjectNumber"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Quick View"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="ReservationObject">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="ReservationObjectNumber"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Plant"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_HandlingUnitVHType/Plant">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_HandlingUnitVHType/ShippingPoint">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_HuMProductsValueHelpType/Warehouse">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_PackagingMaterialVHType/MaterialType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_PackagingMaterialVHType/PackagingMaterialType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_PackagingMaterialVHType/PackagingMaterialCategory">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_PackagingMaterialVHType/AuthorizationGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.C_ShippingPointVHType/ShippingPointName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_Customer_VHType/CustomerAccountGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_Customer_VHType/AuthorizationGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_Customer_VHType/IsBusinessPurposeCompleted">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_Customer_VHType/IsCompetitor">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_DeliveryBlockReasonType/DeliveryBlockReason">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_DeliveryBlockReasonType/DeliveryBlockReason_Text">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_DeliveryDocumentType/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_DeliveryDocumentType/HeaderGrossWeight"/>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_DeliveryDocumentType/HeaderNetWeight"/>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_DeliveryDocumentType/HeaderVolume"/>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_DeliveryDocumentType/ReleasedCreditAmount"/>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_DeliveryDocumentType/TotalNetAmount"/>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_PackingInstructionStdVHType/PackingInstructionSystemUUID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_SalesOrganizationType/AddressID">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_ShippingPointStdVHType/ShippingPointName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_Supplier_VHType/AuthorizationGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_Supplier_VHType/SupplierAccountGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_Supplier_VHType/IsBusinessPurposeCompleted">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="C_HANDLINGUNITMONITOR_CDS.I_WarehouseStdVHType/WarehouseName">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
